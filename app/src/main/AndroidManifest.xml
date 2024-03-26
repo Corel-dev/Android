@@ -13,6 +13,11 @@
         android:theme="@style/Theme.AnthonyProject"
         tools:targetApi="31">
         <activity
+            android:name=".DestinationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_destination"
+            android:theme="@style/Theme.AnthonyProject" />
+        <activity
             android:name=".FormActivity"
             android:exported="false"
             android:label="@string/title_activity_form"

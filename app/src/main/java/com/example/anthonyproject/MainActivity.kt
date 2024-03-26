@@ -80,13 +80,13 @@ fun Demo()
     Box(modifier = Modifier.fillMaxWidth(),
         contentAlignment = Alignment.Center) {
         Button(
-            onClick = { },
+            onClick = {mContext.startActivity(Intent(mContext , DestinationActivity::class.java ))  },
             shape = RoundedCornerShape(5.dp),
             colors = ButtonDefaults.buttonColors(Color.Blue)
 
         )
         {
-            Text(text = "See more")
+            Text(text = "Destination")
 
         }
     }
