@@ -23,6 +23,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -37,6 +38,10 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.anthonyproject.ui.theme.AnthonyProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -77,18 +82,27 @@ fun Demo()
         fontWeight = FontWeight.Bold,
         fontStyle = FontStyle.Italic,
         textAlign = TextAlign.Center)
-    Box(modifier = Modifier.fillMaxWidth(),
-        contentAlignment = Alignment.Center) {
-        Button(
-            onClick = {mContext.startActivity(Intent(mContext , DestinationActivity::class.java ))  },
-            shape = RoundedCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.Blue)
+    Button(
+        onClick = {mContext.startActivity(Intent(mContext , FirstScreenActivity::class.java )) },
+        shape = RoundedCornerShape(5.dp),
+        colors = ButtonDefaults.buttonColors(Color.Red),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 30.dp, end = 30.dp)
+    ) {
+        Text(text = "Continue")
 
-        )
-        {
-            Text(text = "Destination")
 
-        }
+    }
+    Button(
+        onClick = {mContext.startActivity(Intent(mContext , DestinationActivity::class.java ))  },
+        shape = RoundedCornerShape(5.dp),
+        colors = ButtonDefaults.buttonColors(Color.Blue)
+    )
+    {
+        Text(text = "Destination")
+
+    }
     }
     androidx.compose.material3.Text(text = "Courses Offered", fontSize = 29.sp, modifier = Modifier.fillMaxWidth(),
         textAlign = TextAlign.Center,
@@ -108,23 +122,12 @@ fun Demo()
                .clip(shape = CircleShape),
            contentScale = ContentScale.Crop)
    }
-    Button(
-        onClick = {mContext.startActivity(Intent(mContext , LayoutActivity::class.java )) },
-        shape = RoundedCornerShape(5.dp),
-        colors = ButtonDefaults.buttonColors(Color.Red),
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp)
-    ) {
-        Text(text = "Continue")
 
-
-    }
         
   }
 
 
-}
+
 
 
 

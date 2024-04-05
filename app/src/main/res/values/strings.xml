@@ -4,4 +4,10 @@
     <string name="title_activity_intent">IntentActivity</string>
     <string name="title_activity_form">FormActivity</string>
     <string name="title_activity_destination">DestinationActivity</string>
+    <string name="title_activity_explore">ExploreActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_wood">WoodActivity</string>
+    <string name="title_activity_first_screen">FirstScreenActivity</string>
+    <string name="title_activity_splashscreen">SplashscreenActivity</string>
+    <string name="title_activity_splash">Anthony</string>
 </resources>

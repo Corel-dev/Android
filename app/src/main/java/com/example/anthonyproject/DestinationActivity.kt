@@ -16,11 +16,14 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -62,9 +65,10 @@ class DestinationActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyDestination(){
+    val mContext = LocalContext.current
     Column (modifier = Modifier
         .fillMaxSize()){
-        val mContext = LocalContext.current
+
         TopAppBar(title = { Text(text = "Destination", color = Color.White)},
             colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Blue),
             navigationIcon = {
@@ -223,7 +227,29 @@ fun MyDestination(){
            //End of card 4
 
        }
+        Button(
+            onClick = {mContext.startActivity(Intent(mContext , ExploreActivity::class.java )) },
+            shape = RoundedCornerShape(5.dp),
+            colors = ButtonDefaults.buttonColors(Color.Blue)
+
+        )
+        {
+            Text(text = "Explore")
+
+        }
+        Button(
+            onClick = {mContext.startActivity(Intent(mContext , HomeActivity::class.java )) },
+            shape = RoundedCornerShape(5.dp),
+            colors = ButtonDefaults.buttonColors(Color.Blue)
+
+        )
+        {
+            Text(text = "HomeK")
+
+        }
     }
+
+
 
 }
 
